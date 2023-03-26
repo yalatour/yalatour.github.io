@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
       copyright={`${currentYear} ${defaultMessage}`}
       links={[
         {
-          key: 'Ant Design Pro',
-          title: 'Ant Design Pro',
+          key: 'Yala Tour - Discover the Majestic Beasts of Sri Lanka',
+          title: 'Yala Tour - Discover the Majestic Beasts of Sri Lanka',
           href: 'https://pro.ant.design',
           blankTarget: true,
         },

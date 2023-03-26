@@ -76,7 +76,7 @@ export default defineConfig({
    * @name layout 插件
    * @doc https://umijs.org/docs/max/layout-menu
    */
-  title: 'Ant Design Pro',
+  title: 'Yala Tour - Discover the Majestic Beasts of Sri Lanka',
   layout: {
     locale: true,
     ...defaultSettings,
