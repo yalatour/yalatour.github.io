@@ -15,8 +15,9 @@ const Welcome: React.FC = () => {
       justifyContent: 'center',
       height: '100%',
       minHeight: 362,
-      backgroundImage: `url('https://travellersisle.com/wp-content/uploads/2020/03/Udawalawe-or-Yala-national-park.webp)`,
-      backgroundPosition: 'cover'
+      backgroundImage: `url('./bg.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
     }}>
       <div style={{
         display: 'flex',
@@ -26,11 +27,11 @@ const Welcome: React.FC = () => {
       }}>
         <Card
           hoverable
-          style={{ width: '25vw', minWidth: 200 }}
+          style={{ width: '25vw', minWidth: 200, backgroundColor: 'rgba(255, 255, 255, 0.8)' }}
           cover={<img width="50%" src="./logo.svg" />}
           onClick={() => window.location.href = 'https://api.whatsapp.com/send?phone=94779600845'}
         >
-          <Meta title="Great things coming soon." description={<a href='https://api.whatsapp.com/send?phone=94779600845'>Contact Us</a>} />
+          <Meta title="Great things coming soon." description={<a href='https://api.whatsapp.com/send?phone=94779600845'>Reach us through</a>} />
         </Card>
 
       </div>
