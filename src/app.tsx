@@ -20,29 +20,29 @@ export async function getInitialState(): Promise<{
   loading?: boolean;
   fetchUserInfo?: () => Promise<API.CurrentUser | undefined>;
 }> {
-  const fetchUserInfo = async () => {
-    try {
-      const msg = await queryCurrentUser({
-        skipErrorHandler: true,
-      });
-      return msg.data;
-    } catch (error) {
-      history.push(rootPath);
-    }
-    return undefined;
-  };
-  // 如果不是登录页面，执行
-  const { location } = history;
-  if (location.pathname !== rootPath) {
-    const currentUser = await fetchUserInfo();
-    return {
-      fetchUserInfo,
-      currentUser,
-      settings: defaultSettings as Partial<LayoutSettings>,
-    };
+  // const fetchUserInfo = async () => {
+  //   if () {
+  //     history.push(rootPath);
+  //   }
+  //   return undefined;
+  // };
+  // // 如果不是登录页面，执行
+  // const { location } = history;
+  // if (location.pathname !== rootPath) {
+  //   const currentUser = await fetchUserInfo();
+  //   return {
+  //     fetchUserInfo,
+  //     currentUser,
+  //     settings: defaultSettings as Partial<LayoutSettings>,
+  //   };
+  // }
+
+  if (!location.origin.includes('localhost') && location.origin.includes('http://')) {
+    history.push(location.origin.replace('http://', 'https://'));
   }
+
   return {
-    fetchUserInfo,
+    fetchUserInfo: undefined,
     settings: defaultSettings as Partial<LayoutSettings>,
   };
 }

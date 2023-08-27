@@ -29,6 +29,13 @@ export default [
     component: './Welcome',
     layout: false,
   },
+  {
+    path: '/test',
+    name: 'test',
+    icon: 'smile',
+    component: './Test',
+    layout: false,
+  },
   // {
   //   path: '/admin',
   //   name: 'admin',
